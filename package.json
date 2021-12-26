@@ -17,12 +17,10 @@
     "web-vitals": "2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "start-storybook -p 6006 -s public",
+    "build": "build-storybook -s public",
     "test": "react-scripts test",
-    "clean": "npm install --package-lock-only && npm ci",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "clean": "npm install --package-lock-only && npm ci"
   },
   "eslintConfig": {
     "extends": [
@@ -53,14 +51,14 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-links": "^6.4.9",
-    "@storybook/builder-webpack5": "^6.4.9",
-    "@storybook/manager-webpack5": "^6.4.9",
-    "@storybook/node-logger": "^6.4.9",
-    "@storybook/preset-create-react-app": "^4.0.0",
-    "@storybook/react": "^6.4.9",
+    "@storybook/addon-actions": "6",
+    "@storybook/addon-essentials": "6",
+    "@storybook/addon-links": "6",
+    "@storybook/builder-webpack5": "6",
+    "@storybook/manager-webpack5": "6",
+    "@storybook/node-logger": "6",
+    "@storybook/preset-create-react-app": "4",
+    "@storybook/react": "6",
     "@typescript-eslint/eslint-plugin": "5",
     "@typescript-eslint/parser": "5",
     "autoprefixer": "10",
@@ -70,9 +68,9 @@
     "eslint-plugin-jsx-a11y": "6",
     "eslint-plugin-react": "7",
     "eslint-plugin-react-hooks": "4",
-    "eslint-plugin-storybook": "^0.5.5",
+    "eslint-plugin-storybook": "0",
     "postcss": "8",
     "tailwindcss": "3",
-    "webpack": "^5.65.0"
+    "webpack": "5"
   }
 }

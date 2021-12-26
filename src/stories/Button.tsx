@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './button.css';
 
@@ -38,7 +39,8 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      // className={['storybook-button bg', `storybook-button--${size}`, mode].join(' ')}
+      className="p-32"
       style={{ backgroundColor }}
       {...props}
     >

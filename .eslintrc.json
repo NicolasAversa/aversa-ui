@@ -9,6 +9,13 @@
     "sourceType": "module"
   },
   "plugins": ["storybook", "@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
+    }
+  },
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
@@ -24,13 +31,11 @@
       "error",
       "ignorePackages",
       {
-        "js": "never",
-        "jsx": "never",
         "ts": "never",
-        "tsx": "never",
-        "stories": "never"
+        "tsx": "never"
       }
     ],
+    "react/require-default-props": "off",
     "import/no-extraneous-dependencies": "off"
   }
 }
