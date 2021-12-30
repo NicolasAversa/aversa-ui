@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { FC } from 'react';
 
 type Props = {
@@ -20,7 +21,8 @@ export const Button: FC<Props> = ({
   ...props
 }) => {
   const colors = {
-    indigo: 'bg-indigo-200 text-indigo-800 shadow-indigo-200 hover:shadow-indigo-200',
+    indigo:
+      'bg-indigo-200 text-indigo-800 shadow-indigo-200 hover:shadow-indigo-200',
   };
 
   const spacing: string = 'px-5 py-3 rounded-xl';
@@ -32,7 +34,7 @@ export const Button: FC<Props> = ({
     <button
       {...props}
       type="button"
-      className={[text, spacing, width, animation, colors[color]].join(' ')}
+      className={[text, spacing, width, animation].join(' ')}
     >
       {icon && <img src={icon} alt="Icon" />}
       {children}

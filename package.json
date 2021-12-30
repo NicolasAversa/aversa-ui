@@ -17,8 +17,8 @@
     "web-vitals": "2"
   },
   "scripts": {
-    "start": "start-storybook -p 6006 -s public",
-    "build": "build-storybook -s public",
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook",
     "test": "react-scripts test",
     "clean": "npm install --package-lock-only && npm ci"
   },
