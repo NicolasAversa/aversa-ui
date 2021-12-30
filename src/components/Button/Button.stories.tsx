@@ -9,4 +9,4 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = { children: 'Hola gatooo' };
+Primary.args = { children: 'Send', fullWidth: false, color: 'indigo' };
