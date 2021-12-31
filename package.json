@@ -19,7 +19,6 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
-    "test": "react-scripts test",
     "clean": "npm install --package-lock-only && npm ci"
   },
   "eslintConfig": {
