@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
-import { FC } from 'react';
+import { ReactNode } from 'react';
 
 type Props = {
   icon?: string;
-  color?: string;
   fullWidth?: boolean;
+  color?: 'indigo' | 'red' | 'emerald';
+  children: ReactNode;
 };
 
 const defaultProps = {
@@ -13,28 +13,36 @@ const defaultProps = {
   fullWidth: false,
 };
 
-export const Button: FC<Props> = ({
+export const Button = ({
   icon,
   fullWidth,
   color,
   children,
   ...props
-}) => {
+}: Props) => {
   const colors = {
     indigo:
       'bg-indigo-200 text-indigo-800 shadow-indigo-200 hover:shadow-indigo-200',
+    red: 'bg-red-200 text-red-800 shadow-red-200 hover:shadow-red-200',
+    emerald:
+      'bg-emerald-200 text-emerald-800 shadow-emerald-200 hover:shadow-emerald-200',
   };
-
-  const spacing: string = 'px-5 py-3 rounded-xl';
-  const text: string = 'uppercase text-sm font-bold';
-  const width: string = fullWidth ? 'w-full' : '';
-  const animation: string = 'transition ease-in-out hover:-translate-y-1 shadow-md hover:shadow-lg';
+  const spacing = 'px-5 py-3 rounded-xl';
+  const text = 'uppercase text-sm font-bold';
+  const width = fullWidth ? 'w-full' : '';
+  const animation = 'transition ease-in-out hover:-translate-y-1 shadow-md hover:shadow-lg';
 
   return (
     <button
       {...props}
       type="button"
-      className={[text, spacing, width, animation].join(' ')}
+      className={[
+        text,
+        spacing,
+        width,
+        animation,
+        colors[color as keyof typeof colors],
+      ].join(' ')}
     >
       {icon && <img src={icon} alt="Icon" />}
       {children}
