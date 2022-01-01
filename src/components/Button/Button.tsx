@@ -18,7 +18,6 @@ export const Button = ({
   fullWidth,
   color,
   children,
-  ...props
 }: Props) => {
   const colors = {
     indigo:
@@ -34,7 +33,6 @@ export const Button = ({
 
   return (
     <button
-      {...props}
       type="button"
       className={[
         text,
