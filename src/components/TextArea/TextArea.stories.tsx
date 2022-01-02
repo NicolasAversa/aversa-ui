@@ -1,17 +1,29 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Article } from './Article';
+import { Button } from '../Button';
+import { Form } from '../Form';
+import { TextArea } from './TextArea';
 
 export default {
-  title: 'Card',
-  component: Card,
-} as ComponentMeta<typeof Card>;
+  title: 'TextArea',
+  component: TextArea,
+  argTypes: { onSubmit: { action: 'Form submission' } },
+} as ComponentMeta<typeof TextArea>;
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-const Template: ComponentStory<typeof Card> = (args) => <div className="w-1/4 mx-auto"><Card {...args} /></div>;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  // user: '0x123j123h12g312tg3fv3v',
-  body: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-  image: 'https://i.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.webp',
+type Props = {
+  // eslint-disable-next-line no-unused-vars
+  onSubmit: (data: {}) => void;
 };
+
+const Template: ComponentStory<typeof Form> = ({ onSubmit }: Props) => (
+  <Form onSubmit={(data) => onSubmit(data)}>
+    {({ register }) => (
+      <div className="flex flex-col space-y-4 max-w-screen-sm mx-auto">
+        <TextArea {...register('text')} />
+        <Button submit className="w-1/4 self-end" color="red">Submit</Button>
+      </div>
+    )}
+  </Form>
+);
+
+export const Default = Template.bind({});

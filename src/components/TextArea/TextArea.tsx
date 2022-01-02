@@ -1,10 +1,13 @@
-type Props = {
-  // eslint-disable-next-line no-unused-vars
-  register: (name: string) => {};
-  name: string;
-};
+import { DetailedHTMLProps, forwardRef, TextareaHTMLAttributes } from 'react';
 
-export const TextArea = ({ register, name }: Props) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <textarea {...register(name)} />
+type Props = DetailedHTMLProps<
+  TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
+>;
+
+export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
+  (props, ref) => (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <textarea ref={ref} {...props} className="bg-gray-50 p-4 rounded-xl border border-gray-200" />
+  ),
 );
