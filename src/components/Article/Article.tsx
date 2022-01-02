@@ -3,24 +3,25 @@ import { Title } from '../Title';
 
 type Props = {
   image?: string;
-  user: string;
+  user?: string;
   body: string;
 };
 
 const defaultProps = {
   image: '',
+  user: '',
 };
 
-export const Card = ({ image, user, body }: Props) => {
-  const spacing = 'pb-8 rounded-3xl space-y-4';
-  const imageContainer = 'px-2 pt-4';
+export const Article = ({ image, user, body }: Props) => {
+  const spacing = 'pb-6 rounded-3xl space-y-4';
+  const imageContainer = 'p-2';
   const imageStyle = 'w-full h-auto rounded-xl';
   const textStyle = 'px-6';
   const effects = 'shadow-md border border-blue-50';
 
   return (
     <article className={[spacing, effects].join(' ')}>
-      <Title level={3} weight="medium" className={textStyle}>{user}</Title>
+      {user && <Title level={3} weight="medium" className={textStyle}>{user}</Title>}
       {image && (
         <div className={imageContainer}>
           <img src={image} className={imageStyle} alt="Icon" />
@@ -31,4 +32,4 @@ export const Card = ({ image, user, body }: Props) => {
   );
 };
 
-Card.defaultProps = defaultProps;
+Article.defaultProps = defaultProps;

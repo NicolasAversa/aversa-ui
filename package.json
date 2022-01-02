@@ -10,8 +10,10 @@
     "@types/node": "16",
     "@types/react": "17",
     "@types/react-dom": "17",
+    "formik": "2",
     "react": "17",
     "react-dom": "17",
+    "react-hook-form": "7",
     "react-scripts": "5",
     "typescript": "4",
     "web-vitals": "2"
@@ -19,7 +21,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
-    "clean": "npm install --package-lock-only && npm ci"
+    "clean": "npm install --package-lock-only && npm audit fix && npm ci"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +71,7 @@
     "eslint-plugin-react-hooks": "4",
     "eslint-plugin-storybook": "0",
     "postcss": "8",
+    "storybook-formik": "2",
     "tailwindcss": "3",
     "webpack": "5"
   }

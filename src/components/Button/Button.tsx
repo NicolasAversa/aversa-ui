@@ -1,23 +1,29 @@
 import { ReactNode } from 'react';
 
 type Props = {
+  submit?: boolean;
   icon?: string;
   fullWidth?: boolean;
   color?: 'indigo' | 'red' | 'emerald';
   children: ReactNode;
+  className?: string;
 };
 
 const defaultProps = {
+  submit: false,
   icon: '',
   color: 'indigo',
   fullWidth: false,
+  className: '',
 };
 
 export const Button = ({
+  submit,
   icon,
   fullWidth,
   color,
   children,
+  className,
 }: Props) => {
   const colors = {
     indigo:
@@ -33,13 +39,14 @@ export const Button = ({
 
   return (
     <button
-      type="button"
+      type={submit ? 'submit' : 'button'}
       className={[
         text,
         spacing,
         width,
         animation,
         colors[color as keyof typeof colors],
+        className,
       ].join(' ')}
     >
       {icon && <img src={icon} alt="Icon" />}
