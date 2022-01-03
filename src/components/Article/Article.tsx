@@ -17,7 +17,7 @@ export const Article = ({ image, user, body }: Props) => {
   const imageContainer = 'p-2';
   const imageStyle = 'w-full h-auto rounded-xl';
   const textStyle = 'px-6';
-  const effects = 'shadow-md border border-blue-50';
+  const effects = 'shadow-md border border-blue-50 bg-white';
 
   return (
     <article className={[spacing, effects].join(' ')}>

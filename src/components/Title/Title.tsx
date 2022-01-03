@@ -30,7 +30,7 @@ export const Title = ({
     <h4 className={`${className} text-xl ${selectedWeight}`}>{children}</h4>,
     <h5 className={`${className} text-lg ${selectedWeight}`}>{children}</h5>,
   ];
-  return level ? titles[level + 1] : null;
+  return level ? titles[level - 1] : null;
 };
 
 Title.defaultProps = defaultProps;

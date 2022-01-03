@@ -5,9 +5,11 @@ type Props = DetailedHTMLProps<
   HTMLTextAreaElement
 >;
 
-export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
-  (props, ref) => (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <textarea ref={ref} {...props} className="bg-gray-50 p-4 rounded-xl border border-gray-200" />
-  ),
-);
+export const TextArea = forwardRef<HTMLTextAreaElement, Props>((props, ref) => (
+  <textarea
+    ref={ref}
+  // eslint-disable-next-line react/jsx-props-no-spreading
+    {...props}
+    className="bg-gray-50 p-4 rounded-xl border border-gray-200 w-full"
+  />
+));
