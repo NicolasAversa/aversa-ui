@@ -22,7 +22,7 @@ export const Paragraph = ({
 
   const selectedWeight = weights[weight as keyof typeof weights];
   return (
-    <p className={`text-base ${selectedWeight} ${className}`}>
+    <p className={`text-sm ${selectedWeight} ${className}`}>
       {children}
     </p>
   );

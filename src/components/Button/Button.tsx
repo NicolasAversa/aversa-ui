@@ -32,8 +32,8 @@ export const Button = ({
     emerald:
       'bg-emerald-200 text-emerald-800 shadow-emerald-200 hover:shadow-emerald-200',
   };
-  const spacing = 'px-5 py-3 rounded-xl';
-  const text = 'uppercase text-sm font-bold';
+  const spacing = 'px-6 py-3 rounded-xl';
+  const text = 'uppercase text-sm font-bold tracking-wide';
   const width = fullWidth ? 'w-full' : '';
   const animation = 'transition ease-in-out hover:-translate-y-1 shadow-md hover:shadow-lg';
 
