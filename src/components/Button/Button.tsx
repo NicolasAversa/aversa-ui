@@ -27,13 +27,13 @@ export const Button = ({
 }: Props) => {
   const colors = {
     indigo:
-      'bg-indigo-200 text-indigo-800 shadow-indigo-200 hover:shadow-indigo-200',
-    red: 'bg-red-200 text-red-800 shadow-red-200 hover:shadow-red-200',
+      'bg-indigo-400 text-indigo-50 shadow-indigo-200 hover:shadow-indigo-200',
+    red: 'bg-red-400 text-red-50 shadow-red-200 hover:shadow-red-200',
     emerald:
-      'bg-emerald-200 text-emerald-800 shadow-emerald-200 hover:shadow-emerald-200',
+      'bg-emerald-400 text-emerald-50 shadow-emerald-200 hover:shadow-emerald-200',
   };
-  const spacing = 'px-6 py-3 rounded-xl';
-  const text = 'uppercase text-sm font-bold tracking-wide';
+  const spacing = 'px-6 py-2 rounded-lg';
+  const text = 'text-sm font-semibold tracking-wide';
   const width = fullWidth ? 'w-full' : '';
   const animation = 'transition ease-in-out hover:-translate-y-1 shadow-md hover:shadow-lg';
 
