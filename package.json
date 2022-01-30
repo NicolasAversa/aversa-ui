@@ -19,9 +19,9 @@
     "web-vitals": "2"
   },
   "scripts": {
-    "start": "start-storybook -p 6006",
-    "build": "build-storybook",
-    "clean": "npm install --package-lock-only && npm audit fix && npm ci"
+    "start": "yarn start-storybook -p 6006",
+    "build": "yarn build-storybook",
+    "clean": "rm yarn.lock && yarn install"
   },
   "eslintConfig": {
     "extends": [

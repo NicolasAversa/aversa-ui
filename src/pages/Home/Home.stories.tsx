@@ -9,7 +9,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="bg-gray-50 py-6">
+      <div className="bg-blue-50 py-6">
         <Story />
       </div>
     ),

@@ -12,4 +12,4 @@ const Template: ComponentStory<typeof TextArea> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { placeholder: 'Write your message' };
+Default.args = { placeholder: 'Write your message', rows: 3 };

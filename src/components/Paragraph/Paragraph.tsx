@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 type Props = {
-  weight?: 'normal' | 'medium' | 'bold';
+  weight?: 'normal' | 'medium' | 'semibold' | 'bold';
   className?: string;
   children: ReactNode;
 };
@@ -17,12 +17,13 @@ export const Paragraph = ({
   const weights = {
     normal: 'font-normal',
     medium: 'font-medium',
+    semibold: 'font-semibold',
     bold: 'font-bold',
   };
 
   const selectedWeight = weights[weight as keyof typeof weights];
   return (
-    <p className={`text-sm ${selectedWeight} ${className}`}>
+    <p className={`text-sm ${selectedWeight} ${className} text-gray-900`}>
       {children}
     </p>
   );
