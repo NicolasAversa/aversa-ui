@@ -1,0 +1,12 @@
+---
+version: "3"
+
+services:
+  frontend:
+    image: aversa-ui:latest
+    command: npm start
+    ports:
+      - "6006:6006"
+    build: .
+    volumes:
+      - ./src:/app/src

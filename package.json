@@ -10,7 +10,6 @@
     "@types/node": "16",
     "@types/react": "17",
     "@types/react-dom": "17",
-    "formik": "2",
     "react": "17",
     "react-dom": "17",
     "react-hook-form": "7",
@@ -21,7 +20,7 @@
   "scripts": {
     "start": "yarn start-storybook -p 6006",
     "build": "yarn build-storybook",
-    "clean": "rm yarn.lock && yarn install"
+    "ci": "rm yarn.lock && yarn install"
   },
   "eslintConfig": {
     "extends": [
@@ -71,7 +70,6 @@
     "eslint-plugin-react-hooks": "4",
     "eslint-plugin-storybook": "0",
     "postcss": "8",
-    "storybook-formik": "2",
     "tailwindcss": "3",
     "webpack": "5"
   }
