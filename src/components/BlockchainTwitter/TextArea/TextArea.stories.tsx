@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextArea } from './TextArea';
 
 export default {
-  title: 'TextArea',
+  title: 'Blockchain Twitter/TextArea',
   component: TextArea,
 } as ComponentMeta<typeof TextArea>;
 

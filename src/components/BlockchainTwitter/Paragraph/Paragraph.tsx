@@ -11,9 +11,7 @@ const defaultProps = {
   className: '',
 };
 
-export const Paragraph = ({
-  weight, children, className,
-}: Props) => {
+export const Paragraph = ({ weight, children, className }: Props) => {
   const weights = {
     normal: 'font-normal',
     medium: 'font-medium',

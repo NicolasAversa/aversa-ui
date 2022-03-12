@@ -22,11 +22,7 @@ export const Post = ({ image, user, body }: Props) => {
         <img src={image} className={imageStyle} alt={`Posted by ${user}`} />
       )}
       <div className="p-6 space-y-1">
-        <Paragraph
-          weight="semibold"
-        >
-          {user}
-        </Paragraph>
+        <Paragraph weight="semibold">{user}</Paragraph>
         <Paragraph>{body}</Paragraph>
       </div>
     </article>
